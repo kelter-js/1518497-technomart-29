@@ -1,108 +1,108 @@
 <!DOCTYPE html>
-<html lang='ru'>
+<html clas='page' lang="ru">
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <title>Техномарт</title>
   </head>
-  <body>
+  <body class='page-body'>
     <!--Размеры всех изображены взяты из макета-->
-    <header>
+    <header class='main-header'>
       <div>
         <!--Логотип-->
-        <a><img src='https://via.placeholder.com/220x47' alt='Техномарт'></a>
-      <!--В последующем параграф поиск будет заменен на форму с input type='search'-->
-        <a href=''>Поиск:</a>
+        <a class='main-header-logo'><img src="https://via.placeholder.com/220x47" alt="Техномарт"></a>
+      <!--В последующем параграф поиск будет заменен на форму с input type="search"-->
+        <a href="">Поиск:</a>
         <!--Ссылки будут изменены-->
-        <a href=''>Закладки:0</a>
-        <a href=''>Корзина:0</a>
+        <a href="">Закладки:0</a>
+        <a href="">Корзина:0</a>
         <!--Параграф оформить заказ будет заменен на <button> -->
-        <a href=''>Оформить заказ</a>
+        <a href="">Оформить заказ</a>
       </div>
 
       <div>
         <p><i>Интернет-магазин строительных материалов и инструментов для ремонта</i></p>
-        <a href='tel:+7812555055'>+7 (812) 555-05-55</a>
+        <a href="tel:+7812555055">+7 (812) 555-05-55</a>
         <p>г.Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
-        <a href=''>Войти</a>
-        <a href=''>Регистрация</a>
+        <a class='login-link' href="">Войти</a>
+        <a class='registration-link' href="">Регистрация</a>
       </div>
 
-        <nav>
-          <ul>
-            <li><a href=''>Главная</a></li>
-            <li><a href=''>Компания</a></li>
-            <li><a href='catalog.html'>Каталог</a></li>
-            <li><a href=''>Новости</a></li>
-            <li><a href=''>Спецпредложения</a></li>
-            <li><a href=''>Доставка</a></li>
-            <li><a href=''>Контакты</a></li>
+        <nav class='main-navigation'>
+          <ul class='site-navigation'>
+            <li><a href="">Главная</a></li>
+            <li><a href="">Компания</a></li>
+            <li><a href="catalog.html">Каталог</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">Спецпредложения</a></li>
+            <li><a href="">Доставка</a></li>
+            <li><a href="">Контакты</a></li>
           </ul>
         </nav>
     </header>
 
-    <main>
+    <main class='container'>
       <!--Оставил h1 как советовали на лекции,что страницы должны содержать данный тег
         впоследствии можно будет применить visually hidden,-->
         <h1>Техномарт</h1>
       <section>
         <!--Решил прислушаться совета лектора и разметить эту часть списком,карусель отдельно-->
-        <ul>
-          <li>
+        <ul class='main-promo-block'>
+          <li class='main-promo-block-item'>
             <h3>Материалы</h3>
-            <a href=''>На любой вкус</a>
+            <a href="">На любой вкус</a>
           </li>
-          <li>
+          <li class='main-promo-block-item'>
             <h3>Инструмент</h3>
-            <a href=''>На все случаи</a>
+            <a href="">На все случаи</a>
           </li>
-          <li>
+          <li class='main-promo-block-item'>
             <h3>Техника</h3>
-            <a href=''>Для стройки</a>
+            <a href="">Для стройки</a>
           </li>
-          <li>
+          <li class='main-promo-block-item'>
             <h3>Скидки 50%</h3>
-            <a href=''>На 350 товаров</a>
+            <a href="">На 350 товаров</a>
           </li>
-          <li>
+          <li class='main-promo-block-item'>
             <h3>Доставка</h3>
-            <a href=''>Бесплатно</a>
+            <a href="">Бесплатно</a>
           </li>
         </ul>
         <!--Место для карусели-->
         <h3>Перфораторы</h3>
         <p>Настоящие мужские игрушки</p>
-        <a href='catalog.html'>Открыть каталог</a>
+        <a href="catalog.html">Открыть каталог</a>
       </section>
 
-      <section>
+      <section class='main-popular-goods'>
         <h2>Популярные товары:</h2>
         <!--Будущая кнопка-->
-        <a href=''>Все популярные товары</a>
+        <a href="">Все популярные товары</a>
 
         <ul>
           <li>
             <!--Фотографии перфораторов являются основным контентом,будут подключены через стили
             Вставил временные заглушки-->
-            <img src='https://via.placeholder.com/184x164' alt='Изображение перфоратора'>
-            <h3><a href=''>Перфоратор BOSCH BFG 9000</a></h3>
+            <img src="https://via.placeholder.com/184x164" alt="Изображение перфоратора">
+            <h3><a href="">Перфоратор BOSCH BFG 9000</a></h3>
             <del>32500 Р.</del>
             <p>25500 Р.</p>
           </li>
           <li>
-            <img src='https://via.placeholder.com/127x112' alt='Изображение перфоратора'>
-            <h3><a href=''>Перфоратор BOSCH BFG 3000</a></h3>
+            <img src="https://via.placeholder.com/127x112" alt="Изображение перфоратора">
+            <h3><a href="">Перфоратор BOSCH BFG 3000</a></h3>
             <del>22500 Р.</del>
             <p>15500 Р.</p>
           </li>
           <li>
-            <img src='https://via.placeholder.com/144x128' alt='Изображение перфоратора'>
-            <h3><a href=''>Перфоратор BOSCH BFG 6000</a></h3>
+            <img src="https://via.placeholder.com/144x128" alt="Изображение перфоратора">
+            <h3><a href="">Перфоратор BOSCH BFG 6000</a></h3>
             <del>30500 Р.</del>
             <p>25500 Р.</p>
           </li>
           <li>
-            <img src='https://via.placeholder.com/127x112' alt='Изображение перфоратора'>
-            <h3><a href=''>Перфоратор BOSCH BFG 2000</a></h3>
+            <img src="https://via.placeholder.com/127x112" alt="Изображение перфоратора">
+            <h3><a href="">Перфоратор BOSCH BFG 2000</a></h3>
             <p>12500 Р.</p>
           </li>
         </ul>
@@ -111,46 +111,46 @@
       <section>
         <h2>Популярные производители:</h2>
         <!--Будущая кнопка-->
-        <a href=''>Все производители</a>
+        <a href="">Все производители</a>
         <ul>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/126x37' alt='BOSCH'>
+            <a href="">
+              <img src="https://via.placeholder.com/126x37" alt="BOSCH">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/123x40' alt='Makita'>
+            <a href="">
+              <img src="https://via.placeholder.com/123x40" alt="Makita">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/146x44' alt='DeWALT'>
+            <a href="">
+              <img src="https://via.placeholder.com/146x44" alt="DeWALT">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/200x75' alt='Интерскол'>
+            <a href="">
+              <img src="https://via.placeholder.com/200x75" alt="Интерскол">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/169x31' alt='Hitachi'>
+            <a href="">
+              <img src="https://via.placeholder.com/169x31" alt="Hitachi">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/121x73' alt='LG'>
+            <a href="">
+              <img src="https://via.placeholder.com/121x73" alt="LG">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/151x96' alt='AEG'>
+            <a href="">
+              <img src="https://via.placeholder.com/151x96" alt="AEG">
             </a>
           </li>
           <li>
-            <a href=''>
-              <img src='https://via.placeholder.com/204x69' alt='Metabo'>
+            <a href="">
+              <img src="https://via.placeholder.com/204x69" alt="Metabo">
             </a>
           </li>
         </ul>
@@ -166,13 +166,13 @@
         основной страницы определенной услуги, поэтому решил Доставка - сделать ссылкой-->
         <ul>
           <li>
-            <a href=''>Доставка</a>
+            <a href="">Доставка</a>
           </li>
           <li>
-            <a href=''>Гарантия</a>
+            <a href="">Гарантия</a>
           </li>
           <li>
-            <a href=''>Кредит</a>
+            <a href="">Кредит</a>
           </li>
         </ul>
 
@@ -183,7 +183,7 @@
               Ведь мы неплохо заработаем,<br> поднимая его на ваш этаж!
             </p>
             <!--Изображение грузовика-->
-            <img src='https://via.placeholder.com/218x153' alt='Изображение грузовика'>
+            <img src="https://via.placeholder.com/218x153" alt="Изображение грузовика">
         </div>
       </section>
 
@@ -199,64 +199,64 @@
         </p>
         <ul>
           <li>
-            <h3>Деловые линии</h3>
+            <p>Деловые линии</p>
           </li>
           <li>
-            <h3>Автотрейдинг</h3>
+            <p>Автотрейдинг</p>
           </li>
           <li>
-            <h3>ЖелДорЭкспедиция</h3>
+            <p>ЖелДорЭкспедиция</p>
           </li>
         </ul>
         <!--Будущая кнопка-->
         <a>Подробнее о компании</a>
       </section>
 
-      <section>
+      <section class=''>
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <a href='#'><img src='https://via.placeholder.com/300x158' alt='Карта'></a>
+        <a href="#"><img src="https://via.placeholder.com/300x158" alt="Карта"></a>
          <!--Будущая кнопка-->
          <a>Забудились? Напишите нам!</a>
       </section>
     </main>
 
-    <footer>
-      <div>
-      <a><img src='https://via.placeholder.com/220x68' alt='Лого'></a>
-      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> <a href='tel:+7812555055'>+7 (812) 555-05-55</a></p>
+    <footer class='page-footer main-footer'>
+      <div main-footer-contacts>
+      <a class='main-footer-logo'><img src="https://via.placeholder.com/220x68" alt="Лого"></a>
+      <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br> <a class='contacts-phone' href="tel:+7812555055">+7 (812) 555-05-55</a></p>
       </div>
 
       <div>
       <ul>
         <li>
-          <a href=''>Компания</a>
+          <a href="">Компания</a>
         </li>
         <li>
-          <a href=''>Новости</a>
+          <a href="">Новости</a>
         </li>
         <li>
-          <a href='catalog.html'>Каталог</a>
+          <a href="catalog.html">Каталог</a>
         </li>
         <li>
-          <a href=''>Доставка</a>
+          <a href="">Доставка</a>
         </li>
         <li>
-          <a href=''>Контакты</a>
+          <a href="">Контакты</a>
         </li>
       </ul>
       <ul>
         <li>
-          <a href=''>Материалы</a>
+          <a href="">Материалы</a>
         </li>
         <li>
-          <a href=''>Техника</a>
+          <a href="">Техника</a>
         </li>
         <li>
-          <a href=''>Инструмент</a>
+          <a href="">Инструмент</a>
         </li>
         <li>
-          <a href=''>Спецпредложения</a>
+          <a href="">Спецпредложения</a>
         </li>
       </ul>
     </div>
@@ -268,20 +268,20 @@
       <div>
         <ul>
           <li>
-            <a href=''>ВКонтакте</a>
+            <a href="">ВКонтакте</a>
           </li>
           <li>
-            <a href=''>Фейсбук</a>
+            <a href="">Фейсбук</a>
           </li>
           <li>
-            <a href=''>Инстаграм</a>
+            <a href="">Инстаграм</a>
           </li>
         </ul>
       </div>
 
       <div>
-        <p>Обратная связь: <a href='#'>mail@htmlacademy.ru</a></p>
-        <p>Разработано &ndash; <a href='https://htmlacademy.ru/intensive/htmlcss'>htmlacademy.ru</a></p>
+        <p>Обратная связь: <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+        <p>Разработано &ndash; <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
       </div>
     </footer>
 
