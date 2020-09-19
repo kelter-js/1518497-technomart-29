@@ -1,7 +1,335 @@
-/*Fonts*/
-font-display:swap;
-
 /*Variables*/
-:root{
-  --basic-color:#06c;
+:root {
+  --basic-white:#FFFFFF;
+  --basic-red:#EE3643;
+  --basic-dark-blue:#32425C;
+  --basic-gray:#A9A9A9;
+  --basic-black:#000000;
+  --basic-darkest-blue:#293449;
+
+  --header-make-an-order-green: #63A63E;
+
+  --promo-block-materials-yellow: #FFBF47;
+  --promo-block-tools-blue: #3BBCE3;
+  --promo-block-tech-pink: #DC91D8;
+  --promo-block-sales-green: #8ED78F;
+  --promo-block-delivery-yellow: #FFC047;
+
+  --footer-navigation-darker-white:#F1F5F7;
+  --footer-yellow:#FFD180;
+  --footer-lighter-yellow: #FFDA96;
+  --footer-address-lighter-white:#F3F7F9;
 }
+
+
+/*Global styles*/
+body {
+  min-width:940px;
+  margin:0px;
+  padding:0px;
+  font-family:'Cuprum',Arial,sans-serif;
+  font-size:13px;
+  line-height:24px;
+  color:var(--basic-black);
+  background-color:var(--basic-white);
+}
+
+.page a {
+  text-decoration: none;
+}
+
+.page img {
+  max-width:100%;
+  height:auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+
+/*Header*/
+.main-header-shopping {
+  background-color:var(--basic-darkest-blue);
+}
+.main-header-info-block i {
+  color:var(--basic-red)
+}
+.main-header-phone {
+  color:var(--basic-red);
+  font-size: 21px;
+  line-height: 30px;
+  font-weight:bold;
+}
+.main-header-address {
+  color:var(--basic-dark-blue);
+  font-size: 14px;
+  line-height: 24px;
+  text-align:center;
+}
+.main-navigation-list {
+  background-color:var(--basic-dark-blue);
+  list-style:none;
+}
+.main-navigation-list a,.main-header-shopping a {
+  color:var(--basic-white);
+}
+.login-link, .registration-link {
+  color:var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+  text-align:center;
+}
+.main-header-shopping {
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-header-info-block p{
+  font-size: 16px;
+  line-height: 23px;
+}
+.main-navigation-list a {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/*Main*/
+.button {
+  background-color:var(--basic-red);
+}
+/*Main-promo*/
+.main-promo-block {
+  list-style:none;
+}
+.promo-block-item h3, .promo-block-item a, .main-carousel h3, .main-carousel a ,.main-carousel p {
+  color:var(--basic-white);
+}
+.main-carousel {
+  background-image:url('https://via.placeholder.com/620x266');
+}
+.promo-block-materials{
+  background-color:var(--promo-block-materials-yellow);
+}
+.promo-block-tools{
+  background-color:var(--promo-block-tools-blue);
+}
+.promo-block-tech{
+  background-color:var(--promo-block-tech-pink);
+}
+.promo-block-sales{
+  background-color:var(--promo-block-sales-green);
+}
+.promo-block-delivery{
+  background-color:var(--promo-block-delivery-yellow);
+}
+.main-promo-block h3{
+  font-size: 24px;
+  line-height: 30px;
+  font-weight:bold;
+}
+.main-promo-block a{
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align:center;
+}
+.main-carousel h3 {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: bold;
+}
+.main-carousel p {
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-carousel a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align:center;
+}
+
+/*Popular goods*/
+.popular-goods-item p {
+  background-color:var(--basic-red);
+}
+.popular-goods-item del {
+  color:var(--basic-gray);
+}
+.popular-goods-item a {
+  color:var(--basic-black);
+}
+.main-popular-goods h2 {
+  color:var(--basic-dark-blue);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.main-popular-goods .button-popular{
+  font-size: 14px;
+  line-height: 18px;
+  color:var(--basic-white);
+  text-transform: uppercase;
+  text-align: center;
+}
+.popular-goods-list {
+  list-style:none;
+}
+.popular-goods-list h3{
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  font-family: 'PT Sans',Arial, sans-serif;
+  text-align: center;
+}
+.popular-goods-list del,.popular-goods-list p{
+  font-size: 17px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: 'PT Sans',Arial, sans-serif;
+}
+.popular-goods-list p {
+  color:var(--basic-white);
+}
+.popular-goods-item .popular-goods-item-old-price {
+  text-decoration: line-through;
+  background-color: var(--basic-white);
+  color:var(--basic-gray);
+}
+
+/*Popular manufacturer*/
+.popular-manufacturer-list {
+  list-style:none;
+}
+.main-popular-manufacturer h2 {
+  color:var(--basic-dark-blue);
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.main-popular-manufacturer .button-popular{
+  font-size: 14px;
+  line-height: 18px;
+  color:var(--basic-white);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/*Services*/
+.services-list {
+  list-style:none;
+}
+.services-list a{
+  color:var(--basic-white);
+  background-color:var(--basic-dark-blue);
+}
+.services-list .service-delivery-link {
+  color:var(--basic-dark-blue);
+  background:none;
+}
+.main-services h2 {
+  font-size: 30px;
+  line-height: 30px;
+}
+.main-services p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'PT Sans',Arial, sans-serif;
+}
+.services-list a {
+  font-size: 21px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.service-description h3 {
+  font-size: 30px;
+  line-height: 30px;
+  color:var(--basic-dark-blue);
+  text-transform: uppercase;
+}
+.service-description p {
+  font-family: 'PT Sans',Arial, sans-serif;
+}
+
+/*Main about us*/
+.main-about-us h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.main-about-us>p {
+  font-family: 'PT Sans',Arial, sans-serif;
+}
+.delivery-companies-list p {
+  font-size: 18px;
+  line-height: 24px;
+}
+.button-about-us {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color:var(--basic-white);
+  text-align: center;
+}
+.contacts h2{
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.contacts p {
+  font-family: 'PT Sans',Arial, sans-serif;
+}
+.contacts a {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+}
+/*Footer*/
+.main-footer-first-section{
+  background-color:var(--basic-dark-blue);
+}
+.main-footer-second-section{
+  background-color:var(--basic-darkest-blue);
+}
+.main-footer-logo {
+  background-color: var(--basic-red);
+}
+.footer-navigation-list,.footer-goods-categories-list,.social-list {
+  list-style:none;
+}
+.main-footer-contacts,.contacts-phone {
+  color:var(--footer-address-lighter-white);
+  font-size: 18px;
+  line-height: 24px;
+}
+.main-footer-navigation a {
+  color:var(--footer-navigation-darker-white);
+  font-size: 18px;
+  line-height: 24px;
+}
+.footer-goods-categories-list a,.footer-feedback-mail,.footer-devs-site{
+  color:var(--footer-yellow);
+}
+.footer-goods-categories-list .footer-tech-link{
+  color:var(--footer-lighter-yellow);
+}
+.main-footer-second-section {
+  color:var(--basic-white);
+}
+.main-footer-copyright {
+  font-size: 16px;
+  line-height: 18px;
+}
+.main-footer-feedback {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+/*Не стилизовал список с информацией о соцсетях, ибо потом вообще уберем названия,оставим иконки*/
