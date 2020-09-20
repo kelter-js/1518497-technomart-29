@@ -6,6 +6,8 @@
   --basic-gray:#A9A9A9;
   --basic-black:#000000;
   --basic-darkest-blue:#293449;
+  --basic-greylight:#C5C5C5;
+  --basic-very-dark-blue: #1D2739;
 
   --header-make-an-order-green: #63A63E;
 
@@ -79,9 +81,30 @@ body {
 .main-header-shopping a {
   color: var(--basic-white);
 }
+.main-navigation-item:hover {
+  background-color: var(--basic-darkest-blue);
+}
+.main-navigation-item:active {
+  background-color: var(--basic-very-dark-blue);
+  opacity: 0.5;
+}
 .login-link,
 .registration-link {
   color: var(--basic-black);
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+.login-link:hover,
+.registration-link:hover {
+  color: var(--basic-red);
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+}
+.login-link:active,
+.registration-link:active {
+  color: var(--basic-greylight);
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -189,7 +212,7 @@ body {
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
-  font-family: "PT Sans",Arial, sans-serif;
+  font-family: "PT Sans","Arial", sans-serif;
   text-align: center;
 }
 .popular-goods-list del,
@@ -235,6 +258,10 @@ body {
 .services-list a{
   color: var(--basic-white);
   background-color: var(--basic-dark-blue);
+}
+.services-list a:hover{
+  color: var(--basic-white);
+  background-color: var(--basic-darkest-blue);
 }
 .services-list .service-delivery-link {
   color: var(--basic-dark-blue);
@@ -346,5 +373,227 @@ body {
   font-size: 16px;
   line-height: 18px;
 }
+.main-footer-first-section a:hover {
+  text-decoration: underline;
+}
+.main-footer-first-section a:active {
+  opacity: 0.5;
+  text-decoration: none;
+}
+.footer-feedback-mail:hover,
+.footer-devs-site:hover {
+  text-decoration: underline;
+}
+.footer-feedback-mail:active,
+.footer-devs-site:active {
+  text-decoration: none;
+  color: var(--basic-red);
+}
+
+
+/*Inner page styles*/
+
+/*Inner page header*/
+.main-header-user-name {
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: var(--basic-black);
+}
+.main-header-user-orders,
+.main-header-user-profile {
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: var(--basic-dark-blue);
+}
+.main-header-user-orders:hover,
+.main-header-user-profile:hover {
+  color: var(--basic-red);
+}
+.main-header-user-orders:active,
+.main-header-user-profile:active,
+.main-header-user-name:active {
+  color: var(--basic-greylight);
+}
+
+/*Inner page categories*/
+.main-catalog-categories a {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.main-catalog-categories h1 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--basic-dark-blue);
+}
+
+
+/*Inner page filters*/
+.filter-by-manufacturer-list {
+  list-style: none;
+}
+.main-filters h3 {
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans","Arial", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.filter-by-manufacturer-item,
+.main-filters>p {
+  font-size: 15px;
+  line-height: 19px;
+  font-family: "PT Sans","Arial", sans-serif;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+.main-filters a {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
+  text-align: center;
+  color: var(--basic-black);
+}
+
+/*Inner page sorting*/
+.sorting-settings-list {
+  list-style: none;
+}
+.main-sorting {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
+}
+.main-sorting h3 {
+  color: var(--basic-black);
+}
+
+
+.sorting-settings-item a{
+  text-decoration: underline;
+  text-decoration-style:dotted;
+  text-decoration-color: var(--basic-red);
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+.sorting-settings-item .sort-by-ascending,
+.sorting-settings-item .sort-by-descending{
+  text-decoration: none;
+}
+.sort-by-price:hover,
+.sort-by-type:hover,
+.sort-by-functional:hover {
+  opacity: 1.0;
+  text-decoration: underline;
+  text-decoration-color: var(--basic-red);
+}
+.sort-by-ascending:hover,
+.sort-by-descending:hover{
+  opacity: 1.0;
+}
+.sort-by-price:active,
+.sort-by-type:active,
+.sort-by-functional:active {
+  opacity: 1.0;
+  text-decoration: none;
+  color: var(--basic-red);
+}
+.sort-by-ascending:active,
+.sort-by-descending:active{
+  opacity: 1.0;
+  color: var(--basic-red);
+}
+
+
+
+/*Inner page goods list*/
+.inner-main-goods {
+  font-family: "PT Sans","Arial", sans-serif;
+}
+.inner-main-goods-list {
+  list-style: none;
+}
+.inner-main-goods-item p {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-red);
+}
+.inner-main-goods .goods-item-old-price {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: line-through;
+  text-transform: uppercase;
+  color: var(--basic-gray);
+  background-color: var(--basic-white);
+}
+.inner-main-goods-item h3 {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.inner-main-goods-item a {
+  color: var(--basic-black);
+}
+.inner-goods-buy-button, .inner-goods-bookmark-button {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Cuprum","Arial", sans-serif;
+  color: var(--basic-white);
+}
+.inner-main-goods-item .inner-goods-bookmark-button {
+  color: var(--basic-dark-blue);
+}
+
+
+/*Inner page pagination*/
+.inner-pagination {
+  font-family: "PT Sans","Arial", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: center;
+}
+.inner-pagination-list {
+  list-style: none;
+}
+.inner-pagination a {
+  color: var(--basic-black);
+}
+.inner-pagination-item:first-child {
+  background-color: var(--basic-red);
+}
+.inner-pagination .selected-page-number {
+  color: var(--basic-white);
+}
+
+/*Inner page about perforators*/
+.inner-about-perforators h2 {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+.inner-about-perforators p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans","Arial", sans-serif;
+}
+
+
+
+
 
 /*Не стилизовал список с информацией о соцсетях, ибо потом вообще уберем названия,оставим иконки*/
