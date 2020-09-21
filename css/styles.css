@@ -437,6 +437,12 @@ body {
 .filter-by-manufacturer-list {
   list-style: none;
 }
+.filter-by-power-supply-item {
+  font-size: 15px;
+  line-height: 19px;
+  font-family: "PT Sans","Arial", sans-serif;
+  text-transform: uppercase;
+}
 .main-filters h3 {
   font-size: 17px;
   line-height: 30px;
@@ -445,13 +451,18 @@ body {
   text-transform: uppercase;
   color: var(--basic-black);
 }
-.filter-by-manufacturer-item,
-.main-filters>p {
+.filter-by-manufacturer-item{
   font-size: 15px;
   line-height: 19px;
   font-family: "PT Sans","Arial", sans-serif;
   text-transform: uppercase;
   color: var(--basic-black);
+}
+.main-filters-container > p {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans","Arial", sans-serif;
+  text-transform: uppercase;
 }
 .main-filters a {
   font-size: 13px;
@@ -459,22 +470,23 @@ body {
   font-family: "PT Sans","Arial", sans-serif;
   text-align: center;
   color: var(--basic-black);
+  text-transform: uppercase;
 }
 
 /*Inner page sorting*/
-.sorting-settings-list {
+.sorting-settings-list,
+.filter-by-power-supply-list {
   list-style: none;
 }
 .main-sorting {
   font-size: 13px;
   line-height: 18px;
   font-family: "PT Sans","Arial", sans-serif;
+  text-transform: uppercase;
 }
 .main-sorting h3 {
   color: var(--basic-black);
 }
-
-
 .sorting-settings-item a{
   text-decoration: underline;
   text-decoration-style:dotted;
@@ -566,6 +578,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   text-align: center;
+  text-transform: uppercase;
 }
 .inner-pagination-list {
   list-style: none;
