@@ -76,9 +76,6 @@ body {
 .main-header-shopping {
   display: grid;
   grid-template-columns: 220px 1fr;
-  width: 940px;
-  margin: 0 auto;
-  padding: 0 10px;
 }
 .main-header-info-block {
   display: grid;
