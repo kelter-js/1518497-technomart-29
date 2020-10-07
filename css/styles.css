@@ -595,7 +595,9 @@ body {
   grid-template-areas:
   'filters sorting'
   'filters goods'
-  '. pagination';
+  '. pagination'
+  'about-peft about-perf'
+  ;
   grid-template-columns: 1fr 1fr;
   margin-bottom: 59px;
 }
@@ -614,10 +616,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
-  grid-template-areas:
-  '1st 2st 3st'
-  '4st 5st 6st'
-  '6st 8st 9st';
 }
 .inner-main-goods-item {
   width: 220px;
@@ -625,41 +623,10 @@ body {
   display: grid;
   grid-template-rows: repeat(4,1fr)
 }
-.inner-main-goods-item:first-child{
-  grid-area: 1st;
-}
-.inner-main-goods-item:nth-child(2){
-  grid-area: 2st;
-}
-.inner-main-goods-item:nth-child(3){
-  grid-area: 3st;
-}
-.inner-main-goods-item:nth-child(4){
-  grid-area: 4st;
-}
-.inner-main-goods-item:nth-child(5){
-  grid-area: 5st;
-}
-.inner-main-goods-item:nth-child(6){
-  grid-area: 6st;
-}
-.inner-main-goods-item:nth-child(7){
-  grid-area: 7st;
-}
-.inner-main-goods-item:nth-child(8){
-  grid-area: 8st;
-}
-.inner-main-goods-item:last-child{
-  grid-area: 9st;
-}
 .inner-pagination {
   grid-area: pagination;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-.inner-pagination-list {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
 }
 
 .filter-by-manufacturer-list {
@@ -828,6 +795,8 @@ body {
 /*Inner page about perforators*/
 .inner-about-perforators {
   margin-bottom: 68px;
+  background-color: var(--footer-navigation-darker-white);
+  grid-area: about-perf;
 }
 .inner-about-perforators h2 {
   font-size: 30px;
