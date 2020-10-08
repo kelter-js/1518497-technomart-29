@@ -590,7 +590,7 @@ body {
 
 /*Inner page filters*/
 /*Inner page grid main content*/
-.main-inner-sorting-filters-goods-pagination-container {
+.main-inner-content {
   display: grid;
   grid-template-areas:
   'filters sorting'
