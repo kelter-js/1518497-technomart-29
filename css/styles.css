@@ -51,7 +51,7 @@ body {
 
 .page img {
   max-width: 100%;
-  height: auto;
+  min-height: auto;
 }
 .container {
   width: 940px;
@@ -292,23 +292,30 @@ body {
 }
 .popular-goods-list {
   list-style: none;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 20px;
   margin: 0;
   padding: 0;
   margin-bottom: 70px;
-  justify-content: space-between;
 }
 .popular-goods-item {
-  width: 220px;
+  width: 219px;
+  min-height: 317px;
+  border: 1px solid #EAEAEA;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
 }
-
-.popular-goods-item-new-price {
-  margin-bottom: 21px;
+.goods-item-image-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 190px;
 }
+
 .popular-goods-item p {
   background-color: var(--basic-red);
 }
@@ -336,6 +343,8 @@ body {
   font-weight: bold;
   font-family: "PT Sans","Arial", sans-serif;
   text-align: center;
+  width: 157px;
+  margin-bottom: 7px;
 }
 
 .popular-goods-list p{
@@ -347,25 +356,25 @@ body {
   font-family: "PT Sans",Arial, sans-serif;
   color: var(--basic-white);
 }
+.popular-goods-item-new-price {
+  margin-bottom: 21px;
+  margin-top: auto;
+}
+.popular-goods-item-old-price {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.popular-goods-item-old-price + .popular-goods-item-new-price {
+  margin-top: 7px;
+}
 .popular-goods-item .popular-goods-item-old-price {
   text-decoration: line-through;
   background-color: var(--basic-white);
   color: var(--basic-gray);
 }
-.popular-goods-item-cart-container {
-  display: flex;
-  flex-direction: column;
-  width: 141px;
-  align-items: center;
-}
 .popular-goods-item-cart-container h3 {
   width: 185px;
   margin: 0px;
-  margin-bottom: 7px;
-}
-.popular-goods-item-cart-container p {
-  margin: 0px;
-  margin-bottom: 13px;
 }
 /*Popular manufacturer*/
 .main-popular-manufacturer-container {
@@ -383,12 +392,14 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 70px;
-  margin-right: -20px;
 }
 .popular-manufacturer-item{
   width: 220px;
   height: 145px;
   margin-right: 20px;
+}
+.popular-manufacturer-item:nth-child(4n){
+  margin-right: 0px;
 }
 .main-popular-manufacturer h2 {
   color: var(--basic-dark-blue);
@@ -828,9 +839,6 @@ body {
   text-transform: uppercase;
   color: var(--basic-gray);
   background-color: var(--basic-white);
-}
-.popular-goods-item-old-price-placeholder {
-  visibility: hidden;
 }
 .inner-main-goods-item h3 {
   font-size: 18px;
