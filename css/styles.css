@@ -17,6 +17,8 @@
   --promo-block-sales-green: #8ED78F;
   --promo-block-delivery-yellow: #FFC047;
 
+  --popular-goods-item-border: #EAEAEA;
+
   --footer-navigation-darker-white:#F1F5F7;
   --footer-yellow:#FFD180;
   --footer-lighter-yellow: #FFDA96;
@@ -80,6 +82,7 @@ body {
   justify-content: space-around;
   margin-top: 42px;
   margin-bottom: 40px;
+  align-items: center;
 }
 .main-header-search-field {
   width: 271px;
@@ -302,7 +305,7 @@ body {
 .popular-goods-item {
   width: 219px;
   min-height: 317px;
-  border: 1px solid #EAEAEA;
+  border: 1px solid var(--popular-goods-item-border);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -638,6 +641,7 @@ body {
   text-align: center;
   color: var(--basic-black);
 }
+
 .main-header-user-orders,
 .main-header-user-profile {
   font-size: 16px;
@@ -656,11 +660,14 @@ body {
 }
 
 /*Inner page categories*/
-/*я так понимаю, хлебные крошки реализовываться будут через флекс либо через стили списков*/
 .main-catalog-categories-list {
   padding: 0px;
   margin: 0px;
   margin-bottom: 20px;
+  display: flex;
+}
+.main-catalog-categories-item {
+  margin-right: 20px;
 }
 .main-inner-catalog-header-container {
   margin-bottom: 20px;
@@ -699,9 +706,14 @@ body {
 .main-sorting {
   grid-area: sorting;
 }
-/*Сортировка также через флексы будет*/
 .inner-main-goods {
   grid-area: goods;
+}
+.main-filters-container {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  justify-content: center;
 }
 .inner-main-goods-list {
   padding-top: 28px;
@@ -710,10 +722,13 @@ body {
   column-gap: 20px;
 }
 .inner-main-goods-item {
-  width: 220px;
-  height: 318px;
-  display: grid;
-  grid-template-rows: repeat(4,1fr)
+  width: 219px;
+  min-height: 317px;
+  border: 1px solid var(--popular-goods-item-border);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
 .inner-pagination {
   grid-area: pagination;
@@ -724,12 +739,14 @@ body {
 .filter-by-manufacturer-list {
   list-style: none;
   padding: 0px;
+  margin: 0px;
 }
 .filter-by-power-supply-item {
   font-size: 15px;
   line-height: 19px;
   font-family: "PT Sans","Arial", sans-serif;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 .main-filters h3 {
   font-size: 17px;
@@ -745,6 +762,7 @@ body {
   font-family: "PT Sans","Arial", sans-serif;
   text-transform: uppercase;
   color: var(--basic-black);
+  margin-bottom: 20px;
 }
 .main-filters .main-filters-header {
   font-size: 13px;
@@ -775,13 +793,22 @@ body {
 }
 .main-sorting h3 {
   color: var(--basic-black);
+  margin-right: 140px;
 }
+.main-sorting-container {
+  display: flex;
+}
+.sorting-settings-list {
+  display: flex;
+}
+/*margin-right временное решение, чтобы не так резало глаза. потом asc-desc поменяю на иконки и проставлю маргины*/
 .sorting-settings-item a{
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--basic-red);
   color: var(--basic-black);
   opacity: 0.3;
+  margin-right: 15px
 }
 .sorting-settings-item .sort-by-ascending,
 .sorting-settings-item .sort-by-descending{
@@ -821,7 +848,7 @@ body {
   list-style: none;
   padding: 0px;
 }
-.inner-main-goods-item p {
+.inner-main-goods-item .popular-goods-item-new-price {
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -830,7 +857,7 @@ body {
   color: var(--basic-white);
   background-color: var(--basic-red);
 }
-.inner-main-goods .goods-item-old-price {
+.inner-main-goods .popular-goods-item-old-price  {
   font-size: 17px;
   line-height: 18px;
   font-weight: bold;
@@ -845,6 +872,7 @@ body {
   line-height: 20px;
   font-weight: bold;
   text-align: center;
+  width: 185px;
 }
 .inner-main-goods-item a {
   color: var(--basic-black);
@@ -873,6 +901,18 @@ body {
 .inner-pagination-list {
   list-style: none;
   padding-inline-start: 0px;
+  display: flex;
+}
+.inner-pagination-item {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inner-pagination-item:last-child {
+  width: 140px;
+  height: 38px;
 }
 .inner-pagination a {
   color: var(--basic-black);
