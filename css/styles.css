@@ -219,6 +219,12 @@ body {
   padding-left: 45px;
   padding-right: 27px;
   margin-right: 10px;
+  position: relative;
+}
+.login-link svg {
+  position: absolute;
+  left: 19px;
+  top: 14px;
 }
 .login-link:hover path,
 .login-link:focus path  {
@@ -310,7 +316,7 @@ body {
 .registration-link {
   display: inline-block;
   color: var(--basic-black);
-  background-color: rgba(var(--header-login-background),0.0001);
+  background-color: var(--basic-white);
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -427,12 +433,15 @@ body {
   text-transform: uppercase;
   position: absolute;
   color: var(--basic-white);
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
-  padding-top: 4px;
+  padding-top: 6px;
   top: 5px;
   right: -25px;
   width: 100px;
-  height: 26px;
+  height: 24px;
   transform: rotate(45deg);
   background-color: var(--basic-red);
   background-repeat: no-repeat;
@@ -582,12 +591,15 @@ body {
   text-transform: uppercase;
   position: absolute;
   color: var(--basic-white);
+  font-family: 'Cuprum', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
   text-align: center;
-  padding-top: 4px;
+  padding-top: 6px;
   top: 5px;
   right: -25px;
   width: 100px;
-  height: 26px;
+  height: 24px;
   transform: rotate(45deg);
   background-color: var(--basic-red);
   background-repeat: no-repeat;
