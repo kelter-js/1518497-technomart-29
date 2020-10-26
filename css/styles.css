@@ -11,13 +11,16 @@
   --basic-greylight:#C5C5C5;
   --basic-greylight-rgb: 197,197,197;
   --basic-very-dark-blue: #1D2739;
+  --basic-very-dark-green-border: #367315;
 
   --header-make-an-order-green: #63A63E;
   --header-logo-active-red: #BA2732;
   --header-menu-active-option: #161D29;
-  --header-make-an-order-active: #5FBB2D;
+  --basic-brighter-green: #5FBB2D;
+  --basic-darker-green: #518534;
   --header-login-active: #3D546F;
   --header-login-background: 0,0,0;
+
 
   --promo-block-materials-yellow: #FFBF47;
   --promo-block-tools-blue: #3BBCE3;
@@ -39,6 +42,9 @@
   --footer-address-lighter-white:#F3F7F9;
   --footer-social-background: #212A3A;
 
+  --inner-page-background-red: #F7F3EC;
+  --inner-page-show-more-background: #F2F6F8;
+  --inner-pagination: #E5E5E5;
 }
 
 
@@ -93,7 +99,9 @@ body {
 /*Header*/
 .main-header {
   background-color: var(--footer-navigation-darker-white);
+  margin-bottom: 59px;
 }
+
 .main-header-bar {
   background-color: var(--basic-darkest-blue);
   width: 100%;
@@ -103,7 +111,7 @@ body {
   justify-content: space-between;
   margin-top: 42px;
   margin-bottom: 40px;
-  align-items: center;
+  height: 72px;
 }
 .main-header-search-field {
   flex-grow: 1;
@@ -114,6 +122,7 @@ body {
 .main-header-bookmarks {
   padding: 9px 0px;
   padding-left: 43px;
+  padding-right: 24px;
   position: relative;
 }
 .main-header-bookmarks:active,
@@ -136,7 +145,7 @@ body {
   content: "";
   position: absolute;
   top: 13px;
-  left: 25px;
+  left: 12px;
   width: 15px;
   height: 15px;
   background-image: url("/img/header-cart.svg");
@@ -167,28 +176,36 @@ body {
 
 .main-header-cart {
   padding: 9px 0px;
-  padding-left: 48px;
+  padding-left: 35px;
+  padding-right: 25px;
+  margin-left: -5px;
   position: relative;
-  margin-right: 25px;
+}
+.cart-filled {
+  background-color: var(--basic-red);
 }
 .main-header-bookmarks,
-.main-header-cart {
+.main-header-cart{
   display: inline-block;
 }
 .main-header-option-container {
   width: 450px;
   height: 33px;
 }
+
 .main-header-order {
   display: inline-block;
   padding: 9px 0px;
   padding-left: 19px;
   padding-right: 16px;
+  margin-left: -5px;
   background-color: var(--header-make-an-order-green);
 }
 .main-header-order:hover,
-.main-header-order:focus  {
-  background-color: var(--header-make-an-order-active);
+.main-header-order:focus,
+.goods-buy-button:hover,
+.goods-buy-button:focus  {
+  background-color: var(--basic-brighter-green);
 }
 .main-header-order:active {
   background-color: var(--header-make-an-order-green);
@@ -204,10 +221,12 @@ body {
 }
 .main-header-info-block-contacts {
   position: relative;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.main-header-info-block-contacts p {
+  margin: 0px;
 }
 .main-header-info-block-buttons {
   position: relative;
@@ -319,6 +338,7 @@ body {
   background-color: var(--basic-white);
   font-size: 21px;
   line-height: 21px;
+  height: 21px;
   text-align: center;
 }
 
@@ -343,6 +363,7 @@ body {
   line-height: 24px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   height: 42px;
 }
 .main-navigation-list a {
@@ -371,7 +392,6 @@ body {
   "perf perf delivery";
   margin: 0px;
   padding: 0px;
-  margin-top: 60px;
   gap: 20px 20px;
   margin-bottom: 60px;
 }
@@ -540,10 +560,10 @@ body {
   text-align: center;
 }
 .button:hover,
-.button:focus {
+.button:focus{
   background-color: var(--promo-block-carousel-red);
 }
-.button:active {
+.button:active{
   background-color: var(--header-logo-active-red);
 }
 
@@ -554,6 +574,8 @@ body {
   align-items: center;
   height: 89px;
   background-color: var(--main-show-more-background);
+  padding-left: 28px;
+  padding-right: 14px;
 }
 .main-popular-goods-container h2{
   flex-grow: 1;
@@ -579,14 +601,13 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
-.popular-goods-item:nth-child(2),
-.popular-goods-item:nth-child(4) {
+.new-marker {
   position: relative;
   overflow: hidden;
 }
-.popular-goods-item:nth-child(2)::before,
-.popular-goods-item:nth-child(4)::before {
+.new-marker::before {
   content: "new";
   text-transform: uppercase;
   position: absolute;
@@ -609,21 +630,72 @@ body {
 .popular-goods-item:focus {
   box-shadow: 0px 4px 20px 0px rgba(var(--header-login-background),0.15);
 }
-.popular-goods-item:nth-child(2n){
-  position: relative;
-}
 .goods-item-image-container {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 190px;
+  height: 160px;
 }
 .popular-goods-item p {
   background-color: var(--basic-red);
 }
-.popular-goods-item a {
+.goods-item-name {
   color: var(--basic-black);
+}
+.goods-item-hidden-buttons,
+.popular-goods-item:hover .goods-item-image-container {
+  display: none;
+}
+.popular-goods-item:hover .goods-item-hidden-buttons {
+  display: inline-block;
+  position: absolute;
+  top: 38px;
+  left: 41px;
+}
+.goods-buy-button {
+  display: inline-block;
+  padding: 10px 40px 10px 53px;
+  background-color: var(--header-make-an-order-green);
+  text-transform: uppercase;
+  box-shadow: inset 0px -3px 0px var(--basic-very-dark-green-border);
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  color: var(--basic-white);
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: "Cuprum","Arial", sans-serif;
+}
+.goods-buy-button:active {
+  background-color: var(--basic-darker-green);
+}
+.goods-buy-button::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  background-image: url("/img/cart-icon.svg");
+}
+.goods-bookmark-button {
+  display: inline-block;
+  padding: 8px 30px 6px 31px;
+  border: 3px solid var(--header-make-an-order-green);
+  text-transform: uppercase;
+  font-family: c;
+  border-radius: 2px;
+  font-size: 14px;
+  line-height: 18px;
+  position: relative;
+  color: var(--basic-dark-blue);
+  cursor: pointer;
+  font-family: "Cuprum","Arial", sans-serif;
+}
+.goods-bookmark-button:hover {
+  border: 3px solid var(--basic-dark-blue);
 }
 .main-popular-goods h2 {
   color: var(--basic-dark-blue);
@@ -631,7 +703,8 @@ body {
   line-height: 30px;
   text-transform: uppercase;
 }
-.popular-goods-list h3{
+.popular-goods-list h3,
+.inner-main-goods-list h3{
   font-size: 18px;
   line-height: 20px;
   font-weight: bold;
@@ -641,7 +714,8 @@ body {
   margin-bottom: 7px;
 }
 
-.popular-goods-list p{
+.popular-goods-list p,
+.inner-main-goods-list p{
   font-size: 17px;
   line-height: 18px;
   text-align: center;
@@ -652,7 +726,19 @@ body {
 }
 .popular-goods-item-new-price {
   margin-bottom: 21px;
-  margin-top: auto;
+  display: inline-block;
+  padding: 10px 24px 10px 32px;
+  position: relative;
+}
+.popular-goods-item-new-price::before {
+  content: "";
+  width: 20px;
+  height: 38px;
+  position: absolute;
+  background-image: url("/img/slice_triangle.svg");
+  background-repeat: no-repeat;
+  right: -20px;
+  top: 0px;
 }
 .popular-goods-item-old-price {
   margin-top: 0px;
@@ -678,6 +764,8 @@ body {
   margin-bottom: 20px;
   height: 89px;
   background-color: var(--main-show-more-background);
+  padding-left: 28px;
+  padding-right: 19px;
 }
 .main-popular-manufacturer-container h2 {
   flex-grow: 1;
@@ -711,7 +799,8 @@ body {
 .popular-manufacturer-item a:focus {
   box-shadow: 0px 4px 20px 0px rgba(var(--header-login-background),0.15);
 }
-.popular-manufacturer-item a:active {
+.popular-manufacturer-item a:active,
+.goods-bookmark-button:active {
   opacity: 0.5;
 }
 .main-popular-manufacturer h2 {
@@ -1033,11 +1122,46 @@ body {
 /*Inner page styles*/
 
 /*Inner page header*/
+.main-header-inner {
+  background-color: var(--footer-navigation-darker-white);
+  margin-bottom: 21px;
+}
+
+
 .main-header-user-name {
   font-size: 21px;
   line-height: 21px;
   text-align: center;
   color: var(--basic-black);
+  margin: 12px 0px;
+  margin-right: 18px;
+  margin-left: 19px;
+}
+.main-header-user-profile-link {
+  margin-top: 13px;
+  margin-bottom: 14px;
+  display: inline-block;
+  height: 18px;
+  cursor: pointer;
+}
+.main-header-user-profile-link:hover path,
+.main-header-user-logout-link:hover path,
+.main-header-user-profile-link:focus path,
+.main-header-user-logout-link:focus path   {
+  fill: var(--header-login-active);
+}
+
+.main-header-user-logout-link:active path,
+.main-header-user-profile-link:active path {
+  fill: var(--basic-greylight);
+}
+.main-header-user-logout-link {
+  margin-top: 14px;
+  margin-bottom: 14px;
+  display: inline-block;
+  width: 20px;
+  height: 17px;
+  cursor: pointer;
 }
 
 .main-header-user-orders,
@@ -1047,6 +1171,35 @@ body {
   text-align: center;
   color: var(--basic-dark-blue);
 }
+.main-header-user-orders {
+  margin-right: 27px;
+}
+.main-header-user-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.main-header-user-navigation {
+  position: relative;
+  height: 18px;
+}
+.main-header-user-navigation::before {
+  content:'';
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  position: absolute;
+  border: 2px solid var(--basic-dark-blue);
+  top: 9px;
+  left: 88px;
+}
+.main-header-user-navigation:hover::before,
+.main-header-user-navigation:focus::before {
+  border: 2px solid var(--basic-red);
+}
+.main-header-user-navigation:active::before {
+  border: 2px solid var(--basic-greylight);
+}
 .main-header-user-orders:hover,
 .main-header-user-profile:hover,
 .main-header-user-orders:focus,
@@ -1055,22 +1208,48 @@ body {
 }
 .main-header-user-orders:active,
 .main-header-user-profile:active,
-.main-header-user-name:active {
+.main-header-user-name:active{
   color: var(--basic-greylight);
+}
+.main-header-user-area {
+  background-color: var(--basic-white);
+  display: inline-block;
+  height: 45px;
+  padding-left: 15px;
+  padding-right: 17px;
+  margin-bottom: 7px;
 }
 
 /*Inner page categories*/
 .main-catalog-categories-list {
   padding: 0px;
+  list-style:none;
   margin: 0px;
   margin-bottom: 20px;
   display: flex;
+  align-items: center;
+  list-style-image: url('/img/menu-arrow.svg');
 }
-.main-catalog-categories-item {
-  margin-right: 20px;
-}
+/*Пробовал через list-style-image реализовать, решил через псевдоэлементы добавить*/
 .main-inner-catalog-header-container {
   margin-bottom: 20px;
+  background-color: var(--inner-page-show-more-background);
+  height: 60px;
+  padding-top: 29px;
+  padding-left: 29px;
+}
+.main-catalog-categories-item {
+  padding-left: 10px;
+  margin-right: 30px;
+}
+.main-catalog-categories-item:first-child {
+  list-style: none;
+  padding: 0px;
+  margin-right: 30px;
+}
+.main-inner-catalog-header-container  h1 {
+  margin: 0px;
+  padding: 0px;
 }
 .main-catalog-categories a {
   font-size: 13px;
@@ -1116,10 +1295,12 @@ body {
   justify-content: center;
 }
 .inner-main-goods-list {
-  padding-top: 28px;
+  list-style: none;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  column-gap: 20px;
+  gap: 18px 20px;
+  margin: 0;
+  padding: 0;
 }
 .inner-main-goods-item {
   width: 219px;
@@ -1129,6 +1310,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 .inner-pagination {
   grid-area: pagination;
@@ -1169,6 +1351,11 @@ body {
   line-height: 18px;
   font-family: "PT Sans","Arial", sans-serif;
   text-transform: uppercase;
+  display: inline-block;
+  background-color: var(--inner-page-background-red);
+  margin: 0px;
+  padding: 10px 0px;
+  padding-left: 18px;
 }
 .main-filters a {
   font-size: 13px;
@@ -1191,28 +1378,59 @@ body {
   font-family: "PT Sans","Arial", sans-serif;
   text-transform: uppercase;
 }
-.main-sorting h3 {
+.main-sorting-container {
+  background-color: var(--inner-page-background-red);
+  display: flex;
+  height: 38px;
+  margin-bottom: 28px;
+}
+.main-sorting-container h3 {
+  margin: 0px;
+  padding: 0px;
+  margin-left: 20px;
   color: var(--basic-black);
   margin-right: 140px;
-}
-.main-sorting-container {
-  display: flex;
+  margin-top: 10px;
+  width: 81px;
 }
 .sorting-settings-list {
   display: flex;
+  padding: 0px;
+  margin: 0px;
+  align-items: center;
+  width: 406px;
 }
-/*margin-right временное решение, чтобы не так резало глаза. потом asc-desc поменяю на иконки и проставлю маргины*/
-.sorting-settings-item a{
+.sort-by-price {
+  margin-right: 70px;
+}
+.sort-by-type {
+  margin-right: 65px;
+}
+.sort-by-functional {
+  margin-right: 46px;
+}
+.sort-by-ascending {
+  margin-right: 21px;
+}
+.sort-by-descending {
+  margin-right: 16px;
+}
+.sorting-settings-item a {
   text-decoration: underline;
   text-decoration-style: dotted;
   text-decoration-color: var(--basic-red);
   color: var(--basic-black);
   opacity: 0.3;
-  margin-right: 15px
 }
-.sorting-settings-item .sort-by-ascending,
-.sorting-settings-item .sort-by-descending{
+
+.sorting-settings-item .selected-sorting {
   text-decoration: none;
+  color: var(--basic-red);
+  opacity: 1.0;
+}
+a.sort-by-ascending,
+a.sort-by-descending{
+  opacity: 1.0;
 }
 .sort-by-price:hover,
 .sort-by-type:hover,
@@ -1220,14 +1438,21 @@ body {
 .sort-by-price:focus,
 .sort-by-type:focus,
 .sort-by-functional:focus {
-  opacity: 1.0;
   text-decoration: underline;
   text-decoration-color: var(--basic-red);
+  color: var(--basic-black);
+  opacity: 1.0;
 }
-.sort-by-ascending:hover,
-.sort-by-descending:hover,
-.sort-by-ascending:focus,
-.sort-by-descending:focus{
+.sort-by-ascending:hover path,
+.sort-by-descending:hover path,
+.sort-by-ascending:focus path,
+.sort-by-descending:focus path{
+  fill: var(--basic-black);
+}
+.sort-by-ascending:hover ,
+.sort-by-descending:hover ,
+.sort-by-ascending:focus ,
+.sort-by-descending:focus {
   opacity: 1.0;
 }
 .sort-by-price:active,
@@ -1237,10 +1462,13 @@ body {
   text-decoration: none;
   color: var(--basic-red);
 }
-.sort-by-ascending:active,
-.sort-by-descending:active{
+.sort-by-ascending:active path,
+.sort-by-descending:active path{
+  fill: var(--basic-red);
+}
+.sort-by-ascending:active ,
+.sort-by-descending:active {
   opacity: 1.0;
-  color: var(--basic-red);
 }
 
 
@@ -1252,6 +1480,7 @@ body {
 .inner-main-goods-list {
   list-style: none;
   padding: 0px;
+  margin-bottom: 48px;
 }
 .inner-main-goods-item .popular-goods-item-new-price {
   font-size: 17px;
@@ -1279,21 +1508,15 @@ body {
   text-align: center;
   width: 185px;
 }
-.inner-main-goods-item a {
-  color: var(--basic-black);
-}
-.inner-goods-buy-button, .inner-goods-bookmark-button {
-  font-size: 14px;
-  line-height: 18px;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: "Cuprum","Arial", sans-serif;
-  color: var(--basic-white);
-}
+
 .inner-main-goods-item .inner-goods-bookmark-button {
   color: var(--basic-dark-blue);
 }
-
+.inner-main-goods-buttons-container {
+  position: absolute;
+  top: 38px;
+  left: 41px;
+}
 
 /*Inner page pagination*/
 .inner-pagination {
@@ -1309,47 +1532,63 @@ body {
   margin: 0px;
   display: flex;
   flex-wrap: wrap;
-  width: 285px;
+  width: 290px;
 }
-.inner-pagination-item {
-  width: 38px;
-  height: 38px;
+.inner-pagination-item a{
+  width: 36px;
+  height: 36px;
   margin-right: 10px;
+  display: inline-block
+  background-color: var(--basic-white);
+  border-radius: 2px;
+  border: 1px solid var(--inner-pagination);
 }
-.inner-pagination-item:last-child {
+.inner-pagination-item:last-child a {
+  padding: 9px 0px;
+  padding-left: 31px;
+  padding-right: 30px;
   margin-right: 0px;
 }
-.inner-pagination-item:last-child {
-  width: 140px;
-  height: 38px;
+.inner-pagination-item:hover a,
+.inner-pagination-item:focus a {
+  border: 1px solid var(--basic-greylight);
+}
+.inner-pagination-item:active a {
+  border: 1px solid var(--basic-red);
 }
 .inner-pagination-item a {
-  display: block;
   padding: 10px 15px;
 }
 .inner-pagination a {
   color: var(--basic-black);
 }
-.inner-pagination-item:first-child {
-  background-color: var(--basic-red);
-}
 .inner-pagination .selected-page-number {
   color: var(--basic-white);
+  background-color: var(--basic-red);
 }
 
 /*Inner page about perforators*/
 .inner-about-perforators {
-  margin-bottom: 68px;
   background-color: var(--footer-navigation-darker-white);
   grid-area: about-perf;
+}
+.inner-about-perforators .container {
+  padding-top: 64px;
+  padding-bottom: 68px;
+  height: 129px;
 }
 .inner-about-perforators h2 {
   font-size: 30px;
   line-height: 30px;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 25px;
   text-transform: uppercase;
 }
 .inner-about-perforators p {
   font-size: 13px;
+  padding: 0px;
+  margin: 0px;
   line-height: 24px;
   font-family: "PT Sans","Arial", sans-serif;
 }

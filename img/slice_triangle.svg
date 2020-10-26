@@ -1,0 +1,18 @@
+<svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<rect x="-165.5" y="-258.5" width="219" height="317" fill="url(#pattern0)" stroke="#EAEAEA"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-166" y="-259" width="220" height="318">
+<rect x="-165.5" y="-258.5" width="219" height="317" fill="url(#pattern1)" stroke="#EAEAEA"/>
+</mask>
+<g mask="url(#mask0)">
+<rect x="-165.5" y="-258.5" width="219" height="317" fill="white" stroke="#EAEAEA"/>
+</g>
+<path d="M0.632004 0H-118C-119.65 0 -121 1.35 -121 3V35C-121 36.65 -119.65 38 -118 38H0.632004L20 19L0.632004 0Z" fill="#EE3643"/>
+<defs>
+<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.00454545 0.00314465)"/>
+</pattern>
+<pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="scale(0.00454545 0.00314465)"/>
+</pattern>
+</defs>
+</svg>
