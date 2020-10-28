@@ -45,6 +45,8 @@
   --inner-page-background-red: #F7F3EC;
   --inner-page-show-more-background: #F2F6F8;
   --inner-pagination: #E5E5E5;
+
+  --modal-background: #F4F4F4;
 }
 
 
@@ -1135,28 +1137,24 @@ body {
   color: var(--basic-black);
   margin: 12px 0px;
   margin-right: 18px;
-  margin-left: 19px;
 }
-.main-header-user-profile-link {
-  margin-top: 13px;
-  margin-bottom: 14px;
-  display: inline-block;
-  height: 18px;
-  cursor: pointer;
+.main-header-user-name svg {
+  margin-right: 13px;
 }
-.main-header-user-profile-link:hover path,
+
 .main-header-user-logout-link:hover path,
-.main-header-user-profile-link:focus path,
+.main-header-user-name:hover path,
+.main-header-user-name:focus path,
 .main-header-user-logout-link:focus path   {
   fill: var(--header-login-active);
 }
 
 .main-header-user-logout-link:active path,
-.main-header-user-profile-link:active path {
+.main-header-user-name:active path {
   fill: var(--basic-greylight);
 }
 .main-header-user-logout-link {
-  margin-top: 14px;
+  margin: 14px 0px;
   margin-bottom: 14px;
   display: inline-block;
   width: 20px;
@@ -1274,9 +1272,9 @@ body {
   "filters sorting"
   "filters goods"
   ". pagination"
-  "about-peft about-perf"
-  ;
+  "about-peft about-perf";
   grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
   margin-bottom: 59px;
 }
 .main-filters {
@@ -1391,14 +1389,12 @@ body {
   color: var(--basic-black);
   margin-right: 140px;
   margin-top: 10px;
-  width: 81px;
 }
 .sorting-settings-list {
   display: flex;
   padding: 0px;
   margin: 0px;
   align-items: center;
-  width: 406px;
 }
 .sort-by-price {
   margin-right: 70px;
@@ -1593,4 +1589,76 @@ a.sort-by-descending{
   font-family: "PT Sans","Arial", sans-serif;
 }
 
-/*Не стилизовал список с информацией о соцсетях, ибо потом вообще уберем названия,оставим иконки*/
+
+
+/*Modal styles*/
+.modal {
+  display: none;
+  position: fixed;
+  margin: auto;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  box-shadow: 0px 4px 20px 0px rgba(var(--header-login-background),0.15);
+  border-top: 7px solid var(--basic-red);
+}
+.modal-map {
+  width: 943px;
+  height: 442px;
+}
+.close-modal {
+  position: absolute;
+  width: 28px;
+  height: 21px;
+  top: 17px;
+  right: 10px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.close-modal::before,
+.close-modal::after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  background-color: var(--basic-red);
+}
+.close-modal::before {
+  transform: rotate(45deg);
+}
+.close-modal::after {
+transform: rotate(-45deg);
+}
+.modal-contact-us {
+  width: 620px;
+  height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal-button-send {
+  display: inline-block;
+  background-color: var(--basic-red);
+  padding-top: 11px;
+  padding-bottom: 9px;
+  padding-left: 199px;
+  padding-right: 199px;
+  line-height: 18px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+.modal-container {
+  width: 460px;
+  margin: 0 auto;
+}
+.modal-background {
+  background-color: var(--modal-background);
+  width: 100%;
+  height: 112px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-top: 37px;
+  box-sizing: border-box;
+}
