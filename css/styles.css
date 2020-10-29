@@ -47,6 +47,7 @@
   --inner-pagination: #E5E5E5;
 
   --modal-background: #F4F4F4;
+  --modal-inner-background: #F1F1F1;
 }
 
 
@@ -1593,7 +1594,7 @@ a.sort-by-descending{
 
 /*Modal styles*/
 .modal {
-  display: none;
+
   background-color: var(--basic-white);
   position: fixed;
   margin: auto;
@@ -1638,16 +1639,19 @@ transform: rotate(-45deg);
   flex-direction: column;
   justify-content: space-between;
 }
-.modal-button-send {
+.modal-button {
   display: inline-block;
+  line-height: 18px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.modal-button-send {
   background-color: var(--basic-red);
   padding-top: 11px;
   padding-bottom: 9px;
   padding-left: 199px;
   padding-right: 199px;
-  line-height: 18px;
-  font-size: 14px;
-  text-transform: uppercase;
   color: var(--basic-white);
 }
 .modal-container {
@@ -1674,4 +1678,54 @@ transform: rotate(-45deg);
 .second-form {
   width: 50%;
   display: inline-block;
+}
+.modal-cart {
+  width: 620px;
+  height: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+.modal-cart::before {
+  content: "";
+  width: 66px;
+  height: 66px;
+  background-image: url("/img/modal-green-approve.svg");
+  position: absolute;
+  top: 55px;
+  left: 81px;
+}
+.modal-cart .modal-background {
+  padding-left: 112px;
+  padding-right: 112px;
+}
+.button-confirm-order {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  padding-left: 47px;
+  padding-right: 46px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-right: 10px;
+}
+.button-keep-shopping {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+  padding-left: 32px;
+  padding-right: 31px;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  margin-left: -5px;
+}
+.modal-cart p {
+  padding: 0px;
+  margin: 0px;
+  color: var(--basic-black);
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin: 0 auto;
+  margin-top: 73px;
 }
