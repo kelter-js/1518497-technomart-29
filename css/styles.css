@@ -1532,10 +1532,8 @@ a.sort-by-descending{
   width: 290px;
 }
 .inner-pagination-item a{
-  width: 36px;
-  height: 36px;
   margin-right: 10px;
-  display: inline-block
+  display: inline-block;
   background-color: var(--basic-white);
   border-radius: 2px;
   border: 1px solid var(--inner-pagination);
@@ -1554,7 +1552,7 @@ a.sort-by-descending{
   border: 1px solid var(--basic-red);
 }
 .inner-pagination-item a {
-  padding: 10px 15px;
+  padding: 9px 15px;
 }
 .inner-pagination a {
   color: var(--basic-black);
