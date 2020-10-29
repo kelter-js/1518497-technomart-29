@@ -456,7 +456,7 @@ body {
   text-transform: uppercase;
   position: absolute;
   color: var(--basic-white);
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -615,7 +615,7 @@ body {
   text-transform: uppercase;
   position: absolute;
   color: var(--basic-white);
-  font-family: 'Cuprum', Arial, sans-serif;
+  font-family: "Cuprum", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
@@ -1183,7 +1183,7 @@ body {
   height: 18px;
 }
 .main-header-user-navigation::before {
-  content:'';
+  content:"";
   width: 0px;
   height: 0px;
   border-radius: 50%;
@@ -1227,7 +1227,7 @@ body {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-  list-style-image: url('/img/menu-arrow.svg');
+  list-style-image: url("/img/menu-arrow.svg");
 }
 /*Пробовал через list-style-image реализовать, решил через псевдоэлементы добавить*/
 .main-inner-catalog-header-container {
