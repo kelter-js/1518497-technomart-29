@@ -15,15 +15,15 @@
       <div class="main-header-bar">
         <div class="main-header-shopping container">
          <a class="main-header-logo">
-          <img src="img/header-logo.svg" width="108" height="18" alt="Логотип Техномарт" tabindex="-1">
+          <img src="img/header-logo.svg" width="108" height="18" alt="Логотип Техномарт">
          </a>
-         <form action='http://127.0.0.1:5500/index.html' method='post'>
-          <label for='main-search-field' class='visually-hidden'>Поле ввода ключевых слов для поиска</label>
+         <form action="https://echo.htmlacademy.ru/" method="post">
+          <label for="main-search-field" class="visually-hidden">Поле ввода ключевых слов для поиска</label>
           <div class="main-header-search-field">
             <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.458 12.044L17 15.586L15.586 17L12.044 13.458C10.782 14.421 9.21 15 7.5 15C3.35786 15 0 11.6421 0 7.5C0 3.35786 3.35786 0 7.5 0C11.6421 0 15 3.35786 15 7.5C15.0001 9.14309 14.4581 10.7403 13.458 12.044ZM7.5 2C4.467 2 2 4.467 2 7.5C2.00331 10.5362 4.4638 12.9967 7.5 13C10.532 13 13 10.532 13 7.5C13 4.467 10.532 2 7.5 2Z" fill="white"/>
             </svg>
-            <input type='search' id='main-search-field' name='main-search-field' placeholder="Поиск:">
+            <input type="search" id="main-search-field" name="main-search-field" placeholder="Поиск:">
           </div>
         </form>
 
@@ -38,17 +38,17 @@
       <div class="container">
         <div class="main-header-info-block">
           <div class="main-header-info-block-annotation">
-           <p><i>Интернет-магазин строительных материалов<br> и инструментов для ремонта</i></p>
+           <p>Интернет-магазин строительных материалов<br> и инструментов для ремонта</p>
           </div>
 
           <div class="main-header-info-block-contacts">
-              <a class="main-header-phone" href="tel:+7812555055" aria-label='Телефон для связи с нами +7 (812) 555-05-55'>+7 (812) 555-05-55</a>
+              <a class="main-header-phone" href="tel:+7812555055">+7 (812) 555-05-55</a>
               <p class="main-header-address">г.Санкт-Петербург, ул. Б. Конюшенная, д.19/8</p>
           </div>
 
           <div class="main-header-info-block-buttons">
             <a class="login-link" href="">
-              <svg aria-hidden='true' focusable='false' width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg aria-hidden="true" focusable="false" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
                 <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
               </svg>
@@ -79,38 +79,45 @@
           <ul class="main-promo-block">
             <li class="promo-block-item promo-block-materials">
               <h3>Материалы</h3>
-              <a href="" aria-label="Материалы на любой вкус">На любой вкус</a>
+              <a href="">На любой вкус</a>
            </li>
             <li class="promo-block-item promo-block-tools">
               <h3>Инструмент</h3>
-              <a href="" aria-label="Инструмент на все случаи">На все случаи</a>
+              <a href="" >На все случаи</a>
             </li>
             <li class="promo-block-item promo-block-tech">
               <h3>Техника</h3>
-              <a href="" aria-label="Техника для стройки">Для стройки</a>
+              <a href="">Для стройки</a>
             </li>
             <li class="promo-block-item promo-block-sales">
               <h3>Скидки 50%</h3>
-              <a href="" aria-label="Скидки 50% на 350 товаров">На 350 товаров</a>
+              <a href="">На 350 товаров</a>
             </li>
             <li class="promo-block-item promo-block-delivery">
               <h3>Доставка</h3>
-              <a href="" aria-label="Доставка бесплатно">Бесплатно</a>
+              <a href="">Бесплатно</a>
             </li>
-            <li class="promo-block-carousel perf make-visible-block">
-                <h3>перфораторы</h3>
-                <p>Настоящие мужские игрушки</p>
-                <button type='button' aria-label='Пролистнуть слайдер назад' class='carousel-button move-left-button'></button>
-                <button type='button' aria-label='Пролистнуть слайдер вперед' class='carousel-button move-right-button'></button>
-              <a class="button" href="catalog.html">Открыть каталог</a>
+            <li class="promo-block-carousel">
+              <ul class="carousel-inner-list">
+                <li class="carousel perf current-slide">
+                  <h3>перфораторы</h3>
+                  <p>Настоящие мужские игрушки</p>
+                  <a class="button" href="catalog.html">Открыть каталог</a>
+                </li>
+
+                <li class="carousel drill">
+                  <h3>дрели</h3>
+                  <p>Cоседям на радость!</p>
+                  <a class="button" href="catalog.html">Открыть каталог</a>
+                </li>
+              </ul>
+              <button type="button" aria-label="Пролистнуть слайдер назад" class="carousel-button move-left-button"></button>
+              <button type="button" aria-label="Пролистнуть слайдер вперед" class="carousel-button move-right-button"></button>
+              <div class="carousel-control">
+                <button type="button" aria-label="Переключить на первый слайдер" class="first-slide current"></button>
+                <button type="button" aria-label="Переключить на второй слайдер" class="second-slide"></button>
+              </div>
             </li>
-            <li class="promo-block-carousel drill">
-              <h3>дрели</h3>
-              <p>Cоседям на радость!</p>
-              <button type='button' aria-label='Пролистнуть слайдер назад' class='carousel-button move-left-button'></button>
-              <button type='button' aria-label='Пролистнуть слайдер вперед' class='carousel-button move-right-button'></button>
-            <a class="button" href="catalog.html">Открыть каталог</a>
-          </li>
           </ul>
         </section>
 
@@ -123,11 +130,11 @@
           <ul class="popular-goods-list">
             <li class="popular-goods-item">
               <div class="goods-item-image-container">
-                <img src="img/perf_bosch_bfg9000.png" width="184" height="164" alt="">
+                <img src="img/perf_bosch_bfg9000.png" width="184" height="164" alt="Изображение перфоратора BOSCH BFG 9000">
               </div>
               <div class="goods-item-hidden-buttons">
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 9000 в корзину' class='goods-buy-button'>купить</button>
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 9000 в закладки' class='goods-bookmark-button'>в закладки</button>
+                <button type="button" class="goods-buy-button" aria-label="Добавить Перфоратор BOSCH BFG 9000 в корзину">купить</button>
+                <button type="button" class="goods-bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 9000 в закладки">в закладки</button>
               </div>
               <h3><a class="goods-item-name" href="">Перфоратор BOSCH BFG 9000</a></h3>
               <p class="popular-goods-item-old-price">32500 Р.</p>
@@ -136,11 +143,11 @@
 
             <li class="popular-goods-item new-marker">
               <div class="goods-item-image-container">
-                <img src="img/perf_bosch_bfg3000.png" width="127" height="112" alt="">
+                <img src="img/perf_bosch_bfg3000.png" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 3000">
               </div>
               <div class="goods-item-hidden-buttons">
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 3000 в корзину' class='goods-buy-button'>купить</button>
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 3000 в закладки' class='goods-bookmark-button'>в закладки</button>
+                <button type="button" class="goods-buy-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в корзину">купить</button>
+                <button type="button" class="goods-bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 3000 в закладки">в закладки</button>
               </div>
               <h3><a class="goods-item-name" href="">Перфоратор BOSCH BFG 3000</a></h3>
               <p class="popular-goods-item-old-price">22500 Р.</p>
@@ -149,11 +156,11 @@
 
             <li class="popular-goods-item">
               <div class="goods-item-image-container">
-                <img src="img/perf_bosch_bfg6000.png" width="144" height="128" alt="">
+                <img src="img/perf_bosch_bfg6000.png" width="144" height="128" alt="Изображение перфоратора BOSCH BFG 6000">
               </div>
               <div class="goods-item-hidden-buttons">
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 6000 в корзину' class='goods-buy-button'>купить</button>
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 6000 в закладки' class='goods-bookmark-button'>в закладки</button>
+                <button type="button" class="goods-buy-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в корзину">купить</button>
+                <button type="button" class="goods-bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 6000 в закладки">в закладки</button>
               </div>
               <h3><a class="goods-item-name" href="">Перфоратор BOSCH BFG 6000</a></h3>
               <p class="popular-goods-item-old-price">30500 Р.</p>
@@ -162,11 +169,11 @@
 
             <li class="popular-goods-item new-marker">
               <div class="goods-item-image-container">
-                <img src="img/perf_bosch_bfg2000.png" width="127" height="112" alt="">
+                <img src="img/perf_bosch_bfg2000.png" width="127" height="112" alt="Изображение перфоратора BOSCH BFG 2000">
               </div>
               <div class="goods-item-hidden-buttons">
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 2000 в корзину' class='goods-buy-button'>купить</button>
-                <button type='button' aria-label='Добавить Перфоратор BOSCH BFG 2000 в закладки' class='goods-bookmark-button'>в закладки</button>
+                <button type="button" class="goods-buy-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в корзину">купить</button>
+                <button type="button" class="goods-bookmark-button" aria-label="Добавить Перфоратор BOSCH BFG 2000 в закладки">в закладки</button>
               </div>
               <h3><a class="goods-item-name" href="">Перфоратор BOSCH BFG 2000</a></h3>
               <p class="popular-goods-item-new-price">12500 Р.</p>
@@ -246,7 +253,7 @@
               </li>
             </ul>
 
-            <div class="service-description delivery make-visible-block">
+            <div class="service-description delivery current-slide">
               <h3>Доставка</h3>
                 <p>
                   Мы с удовольствием доставим ваш товар прямо<br> к вашему подъезду совершенно бесплатно!<br>
@@ -297,12 +304,12 @@
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-        <button class='map-button' type='button' aria-label="Увеличение изображения карты">
+        <a class="map-button">
           <img src="img/map.png" width="300" height="158" alt="Карта указывающая на месторасположение офиса по адресу ул. Большая Конюшенная, д.19">
-        </button>
-        <button class='button' type='button' aria-label="Связаться с нами">
-          Забудились? Напишите нам!
-        </button>
+        </a>
+        <a class="button" href="writeus.html">
+          Заблудились?&nbsp;Напишите&nbsp;нам!
+        </a>
       </section>
     </div>
     </main>
@@ -311,10 +318,10 @@
       <div class="main-footer-first-wrapper container">
         <div class="main-footer-contacts">
           <a class="main-footer-logo">
-            <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип Техномарт" tabindex="-1">
+            <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип Техномарт">
           </a>
           <div class="main-footer-contacts-container">
-            <p class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br><a class="contacts-phone" href="tel:+7812555055" aria-label='Телефон для связи с нами +7 (812) 555-05-55'>+7 (812) 555-05-55</a></p>
+            <p class="main-footer-address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br><a class="contacts-phone" href="tel:+7812555055">+7 (812) 555-05-55</a></p>
           </div>
         </div>
 
@@ -366,7 +373,7 @@
                <ul class="social-list">
                   <li class="social-list-item">
                    <a class="soc-vk" href="">
-                     <svg role='img' aria-label='Логотип ВКонтакте' width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                     <svg role="img" aria-label="Логотип ВКонтакте" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1627 0.4839C32.6533 0.4839 41.9683 9.58728 41.9683 20.8169C41.9683 32.0461 32.6533 41.1494 21.1627 41.1494C9.67211 41.1494 0.357136 32.0461 0.357136 20.8169C0.357136 9.58728 9.67211 0.4839 21.1627 0.4839Z" fill="#212A3A"/>
                       <path d="M23.5403 24.7281C24.4609 24.4384 25.6396 26.6406 26.8943 27.4834C27.8361 28.1219 28.5573 27.9841 28.5573 27.9841L31.9017 27.9372C31.9017 27.9372 33.6495 27.8322 32.8233 26.4803C32.7549 26.3678 32.3389 25.4781 30.334 23.6472C28.2376 21.7319 28.5217 22.0422 31.0456 18.7309C32.5835 16.7125 33.1988 15.4797 33.0062 14.9547C32.8213 14.4494 31.6918 14.5806 31.6918 14.5806L27.9237 14.6059C27.5568 14.6069 27.2458 14.7175 27.1042 15.0887C27.1013 15.0925 26.5062 16.6506 25.7127 17.9753C24.0362 20.7775 23.367 20.9266 23.0896 20.7512C22.4531 20.3453 22.6139 19.1228 22.6139 18.2537C22.6139 15.5378 23.0299 14.4053 21.7993 14.1128C21.3881 14.0153 21.0876 13.9516 20.039 13.9422C18.6985 13.9225 17.5603 13.9422 16.9151 14.2506C16.4866 14.4597 16.1582 14.9181 16.3576 14.9444C16.6079 14.9772 17.1693 15.0944 17.4698 15.4937C17.8559 16.0112 17.8444 17.1709 17.8444 17.1709C17.8444 17.1709 18.0649 20.3687 17.3244 20.7653C16.8159 21.0372 16.1207 20.4822 14.6252 17.9378C13.8616 16.6366 13.2847 15.1984 13.2847 15.1984C13.2847 15.1984 13.173 14.9312 12.9708 14.785C12.7301 14.6116 12.393 14.5562 12.393 14.5562L8.81659 14.5787C8.81659 14.5787 8.27926 14.5937 8.08185 14.8244C7.90659 15.0287 8.06741 15.4506 8.06741 15.4506C8.06741 15.4506 10.8687 21.9016 14.0407 25.1509C16.9488 28.1341 20.2537 27.9362 20.2537 27.9362H21.7511C21.7511 27.9362 22.2027 27.8856 22.4339 27.6437C22.6496 27.4187 22.6399 26.9959 22.6399 26.9959C22.6399 26.9959 22.6101 25.0187 23.5403 24.7281Z" fill="white"/>
                      </svg>
@@ -374,7 +381,7 @@
                  </li>
                  <li class="social-list-item">
                     <a class="soc-fb" href="">
-                      <svg role='img' aria-label='Логотип ВКонтакте' width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg role="img" aria-label="Логотип ВКонтакте" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8938 0.4839C32.1232 0.4839 41.2265 9.58728 41.2265 20.8169C41.2265 32.0461 32.1232 41.1494 20.8938 41.1494C9.66428 41.1494 0.561076 32.0461 0.561076 20.8169C0.561076 9.58728 9.66428 0.4839 20.8938 0.4839Z" fill="#212A3A"/>
                         <path d="M27 14V10H23C20.7909 10 19 11.7909 19 14V18H15V22H19V32H23V22H27V18H23V14H27Z" fill="white"/>
                       </svg>
@@ -382,7 +389,7 @@
                   </li>
                   <li class="social-list-item">
                    <a class="soc-inst" href="">
-                    <svg role='img' aria-label='Логотип ВКонтакте' width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <svg role="img" aria-label="Логотип ВКонтакте" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8938 0.4839C32.1233 0.4839 41.2265 9.58728 41.2265 20.8169C41.2265 32.0461 32.1233 41.1494 20.8938 41.1494C9.66432 41.1494 0.56112 32.0461 0.56112 20.8169C0.56112 9.58728 9.66432 0.4839 20.8938 0.4839Z" fill="#212A3A"/>
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M13 10H28C29.65 10 31 11.35 31 13V28C31 29.65 29.65 31 28 31H13C11.35 31 10 29.65 10 28V13C10 11.35 11.35 10 13 10ZM24 20.5C24 18.57 22.43 17 20.5 17C18.57 17 17 18.57 17 20.5C17 22.43 18.57 24 20.5 24C22.43 24 24 22.43 24 20.5ZM13 28V19H14.181C14.0626 19.4913 14.0019 19.9947 14 20.5C14 24.0899 16.9101 27 20.5 27C24.0899 27 27 24.0899 27 20.5C26.9986 19.9946 26.9379 19.4912 26.819 19H28V28H13ZM24 17H28V13H24V17Z" fill="white"/>
                     </svg>
@@ -392,35 +399,36 @@
              </div>
 
          <div class="main-footer-feedback">
-            <p>Обратная связь:<br> <a class="footer-feedback-mail" href="mailto:mail@htmlacademy.ru" aria-label='Электронная почта для связи с авторами сайта'>mail@htmlacademy.ru</a></p>
-            <p>Разработано &ndash;<br> <a class="footer-devs-site" href="https://htmlacademy.ru/intensive/htmlcss" aria-label='Сайт авторов сайта'>htmlacademy.ru</a></p>
+            <p>Обратная связь:<br> <a class="footer-feedback-mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
+            <p>Разработано &ndash;<br> <a class="footer-devs-site" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
           </div>
        </div>
     </div>
     </footer>
 
-    <section class="modal modal-map ">
+    <section class="modal modal-map">
       <h2 class="visually-hidden">Месторасположение нашего офиса</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123984!2d30.320894616100702!3d59.93879686904791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1603785082053!5m2!1sru!2sru" width="943" height="442" frameborder="0" style="border:0;" allowfullscreen aria-hidden="false" tabindex="0" title="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная 19/8"></iframe>
-      <a class="close-modal"></a>
+      <button type="button" class="close-modal" aria-label="Закрыть карту"></button>
     </section>
 
-    <section class="modal modal-contact-us make-visible">
+    <section class="modal modal-contact-us">
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="modal-container">
-        <form action='http://127.0.0.1:5500/index.html' method='post'>
-          <label class="first-form-label" for='modal-contact-us-user-name' aria-label='Введите ваше имя'>Ваше имя:</label>
-          <label class="second-form-label" for='modal-contact-us-user-email' aria-label='Введите ваше имя'>Ваш e-mail:</label>
-          <input class="first-form-input" type='text' id='modal-contact-us-user-name' name='user-name' placeholder='Имя Фамилия' required>
-          <input class="second-form-input" type='text' id='modal-contact-us-user-email' name='user-email' placeholder='email@example.com' required>
-          <label class="third-form-label" for='modal-contact-us-letter-text' aria-label='Введите ваше сообщение в свободной форме'>Текст письма:</label>
-          <textarea class="third-form-input" type='text' id='modal-contact-us-letter-text' name='user-text' placeholder='В свободной форме' required></textarea>
+        <form action="https://echo.htmlacademy.ru/" method="post">
+          <label class="first-form-label" for="modal-contact-us-user-name">Ваше имя:</label>
+          <input class="first-form-input" type="text" id="modal-contact-us-user-name" name="user-name" placeholder="Имя Фамилия" required>
+          <label class="second-form-label" for="modal-contact-us-user-email">Ваш e-mail:</label>
+          <input class="second-form-input" type="text" id="modal-contact-us-user-email" name="user-email" placeholder="email@example.com" required>
+          <label class="third-form-label" for="modal-contact-us-letter-text">Текст письма:</label>
+          <textarea class="third-form-input" type="text" id="modal-contact-us-letter-text" name="user-text" placeholder="В свободной форме" required></textarea>
           <div class="modal-background">
-            <button type='button' class='modal-button modal-button-send' aria-label="Подтверждение отправки сообщения">отправить</button>
+            <button type="submit" class="modal-button modal-button-send">отправить</button>
           </div>
         </form>
       </div>
-      <button type='button' class='close-modal' aria-label="Закрыть окно с отправкой сообщения"></button>
+      <button type="button" class="close-modal" aria-label="Закрыть окно с отправкой сообщения"></button>
     </section>
+
   </body>
 </html>
