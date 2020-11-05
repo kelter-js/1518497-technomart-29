@@ -14,7 +14,7 @@
     <header class="main-header-inner">
       <div class="main-header-bar">
         <div class="main-header-shopping container">
-         <a class="main-header-logo">
+         <a class="main-header-logo" href="index.html">
           <img src="img/header-logo.svg" width="108" height="18" alt="Логотип Техномарт">
          </a>
          <form action="https://echo.htmlacademy.ru/" method="post">
@@ -53,7 +53,7 @@
               </svg>
               Равшан Джамшутович
             </a>
-            <a class="main-header-user-logout-link" tabindex="0">
+            <a class="main-header-user-logout-link" href="">
               <svg role="img" aria-label="Иконка выхода из профиля" width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M14.1667 8.5L5.71429 0V6H0V11H5.71429V17L14.1667 8.5Z" fill="#C5C5C5"/>
                 <path d="M16.1771 15.01H11.3895V17H16.1771C18.2514 17 19.0381 15.19 19.0619 13.974V3.028C19.0381 1.811 18.2514 0 16.1771 0H11.3895V1.99H16.1771C16.9762 1.99 17.1219 2.671 17.1391 3.047V13.951C17.1229 14.327 16.9762 15.01 16.1771 15.01Z" fill="#C5C5C5"/>
@@ -70,7 +70,7 @@
 
         <nav class="main-navigation">
           <ul class="main-navigation-list">
-            <li class="main-navigation-item"><a href="">Главная</a></li>
+            <li class="main-navigation-item"><a href="index.html">Главная</a></li>
             <li class="main-navigation-item"><a href="">Компания</a></li>
             <li class="main-navigation-item"><a href="catalog.html">Каталог</a></li>
             <li class="main-navigation-item"><a href="">Новости</a></li>
@@ -122,15 +122,8 @@
                   <div class="toggle toggle-max" tabindex="0" aria-label="Ползунок максимальной цены"></div>
                 </div>
                 <div class="price-controls">
-                  <label class="min-price">
                     <input type="number" name="min-price" value="0" min="0" aria-label="Поле с минимальной ценой">
-                  </label>
-                  <label>
-                    —
-                  </label>
-                  <label class="max-price">
                     <input type="number" name="max-price" value="30000" max="30000" aria-label="Поле с максимальной ценой">
-                  </label>
                 </div>
 
               </div>
@@ -140,28 +133,28 @@
               <legend>Производители:</legend>
               <ul class="filter-by-manufacturer-list">
                 <li class="filter-by-manufacturer-item filter-checkbox filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked tabindex="-1">
-                  <label for="filter-bosch" tabindex="0">bosch</label>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="bosch" id="filter-bosch" checked>
+                  <label for="filter-bosch">bosch</label>
                 </li>
 
                 <li class="filter-by-manufacturer-item filter-checkbox filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interscol" id="filter-interscol" tabindex="-1">
-                  <label for="filter-interscol" tabindex="0">интерскол</label>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="interscol" id="filter-interscol">
+                  <label for="filter-interscol" >интерскол</label>
                 </li>
 
                 <li class="filter-by-manufacturer-item filter-checkbox filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked tabindex="-1">
-                  <label for="filter-makita" tabindex="0">makita</label>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="makita" id="filter-makita" checked>
+                  <label for="filter-makita">makita</label>
                 </li>
 
                 <li class="filter-by-manufacturer-item filter-checkbox filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt" tabindex="-1">
-                  <label for="filter-dewalt" tabindex="0">dewalt</label>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="dewalt" id="filter-dewalt">
+                  <label for="filter-dewalt">dewalt</label>
                 </li>
 
                 <li class="filter-by-manufacturer-item filter-checkbox filter-option">
-                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi" tabindex="-1">
-                  <label for="filter-hitachi" tabindex="0">hitachi</label>
+                  <input class="visually-hidden filter-input-checkbox filter-input" type="checkbox" name="hitachi" id="filter-hitachi">
+                  <label for="filter-hitachi">hitachi</label>
                 </li>
 
               </ul>
@@ -171,12 +164,12 @@
               <legend>питание:</legend>
               <ul class="filter-by-power-supply-list">
                 <li class="filter-by-power-supply-item filter-radio filter-option">
-                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power-supply" id="filter-battery" checked  tabindex="-1">
-                  <label for="filter-battery" tabindex="0">аккумуляторные</label>
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" value="power-supply-battery" name="power-supply" id="filter-battery" checked>
+                  <label for="filter-battery">аккумуляторные</label>
                 </li>
                 <li class="filter-by-power-supply-item filter-radio filter-option">
-                  <input class="visually-hidden filter-input-radio filter-input" type="radio" name="power-supply" id="filter-power-grid" checked  tabindex="-1">
-                  <label for="filter-power-grid" tabindex="0">сетевые</label>
+                  <input class="visually-hidden filter-input-radio filter-input" type="radio" value="power-supply-power-grid" name="power-supply" id="filter-power-grid">
+                  <label for="filter-power-grid">сетевые</label>
                 </li>
               </ul>
             </fieldset>
@@ -194,7 +187,7 @@
             <li class="sorting-settings-item"><a class="sort-by-type" href="">По&nbsp;типу</a></li>
             <li class="sorting-settings-item"><a class="sort-by-functional" href="">По&nbsp;функционалу</a></li>
             <li class="sorting-settings-item">
-              <a class="sort-by-ascending" href="">
+              <a class="sort-by-ascending selected-sort-type" href="">
                 <svg role="img" aria-label="Иконка сортировки по возрастанию" width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.66241 0L11.1624 10L0.162415 10" fill="#C5C5C5"/>
                 </svg>
@@ -358,7 +351,7 @@
    <footer class="page-footer">
     <div class="main-footer-first-wrapper container">
       <div class="main-footer-contacts">
-        <a class="main-footer-logo">
+        <a class="main-footer-logo" href="index.html">
           <img src="img/footer-logo.svg" width="138" height="23" alt="Логотип Техномарт">
         </a>
         <div class="main-footer-contacts-container">
@@ -449,10 +442,8 @@
   <section class="modal modal-cart">
     <h2>Товар добавлен в корзину!</h2>
     <div class="modal-background">
-      <form method="get" action="https://echo.htmlacademy.ru">
-        <button type='submit' class='modal-button button-confirm-order'>оформить заказ</button>
-        <button type='submit' class='modal-button button-keep-shopping'>продолжить покупки</button>
-      </form>
+        <button type="submit" class="modal-button button-confirm-order">оформить заказ</button>
+        <a class="modal-button button-keep-shopping">продолжить покупки</a>
     </div>
     <button type="button" class="close-modal" aria-label="Закрыть окно с отправкой сообщения"></button>
   </section>
