@@ -6,13 +6,6 @@ const userName = contactUsModal.querySelector('.first-form-input');
 const userEmail = contactUsModal.querySelector('.second-form-input');
 const userText = contactUsModal.querySelector('.third-form-input');
 
-const addToCartButtons = document.querySelectorAll('.goods-buy-button');
-const innerModalSuccesAdded = document.querySelector('.modal-cart');
-const keepShoppingButton = innerModalSuccesAdded.querySelector('.button-keep-shopping');
-
-for(let i=0;i<addToCartButtons.length;i++) {
-  alert(123);
-}
 
 let isStorageSupported = true;
 let storageName = '';
