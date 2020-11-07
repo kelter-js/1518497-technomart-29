@@ -933,7 +933,7 @@ body {
   right: 0px;
   top: -45px;
 }
-.services-list-item a{
+.services-list-item button{
   display: inline-block;
   box-shadow:
   0px 1px 0px #293449,
@@ -949,7 +949,12 @@ body {
 .credit-link {
   padding: 14px 157px 18px 22px;
 }
-.services-list-item.selected-service a{
+.delivery-link,
+.guarantee-link,
+.credit-link {
+  border: none;
+}
+.services-list-item.selected-service button{
   background-color: var(--basic-white);
   box-shadow: 0px 1px 0px #FFFFFF;
 }
@@ -979,15 +984,14 @@ body {
   margin: 0;
   margin-bottom: 30px;
 }
-/*<img class="service-logo" src="img/service_delivery.png" width="468" height="261" alt="Изображение грузовика">*/
-.selected-service a{
+.selected-service button{
   color: var(--basic-dark-blue);
 }
-.services-list-item:not(.selected-service) a{
+.services-list-item:not(.selected-service) button{
   color: var(--basic-white);
 }
-.services-list-item:not(.selected-service):hover a,
-.services-list-item:not(.selected-service):focus a{
+.services-list-item:not(.selected-service):hover button,
+.services-list-item:not(.selected-service):focus button{
   color: var(--basic-white);
   background-color: var(--basic-darkest-blue);
 }
@@ -996,7 +1000,7 @@ body {
   line-height: 24px;
   font-family: "PT Sans",Arial, sans-serif;
 }
-.services-list a {
+.services-list button {
   font-size: 21px;
   line-height: 30px;
   font-weight: bold;
@@ -1457,6 +1461,19 @@ body {
   height: 2px;
   background-color: var(--inner-price-bar-color);
 }
+/*
+<div class="range-controls">
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min" tabindex="0" aria-label="Ползунок минимальной цены"></div>
+                  <div class="toggle toggle-max" tabindex="0" aria-label="Ползунок максимальной цены"></div>
+                </div>
+                <div class="price-controls">
+                    <input type="number" name="min-price" value="0" min="0" aria-label="Поле с минимальной ценой">
+                    <input type="number" name="max-price" value="30000" max="30000" aria-label="Поле с максимальной ценой">
+                </div>
+*/
 .range-controls .toggle {
   position: absolute;
   top: 31px;
@@ -1551,10 +1568,10 @@ body {
   left: -35px;
   width: 27px;
   height: 23px;
-  background-image: url("/img/inner-filter-checked.svg");
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.28505 7.48598L4.45605 10.315L12.2391 18.098L26.1711 4.16598L23.3431 1.33698L12.2391 12.439L7.28505 7.48598Z' fill='%23C5C5C5'/%3E%3Cpath d='M21 20C21 20.542 20.542 21 20 21H3C2.458 21 2 20.542 2 20V3C2 2.458 2.458 2 3 2H19.908L21.493 0.415C21.041 0.146542 20.5257 0.00329969 20 0H3C1.35 0 0 1.35 0 3V20C0 21.65 1.35 23 3 23H20C21.65 23 23 21.65 23 20V10.171L21 12.171V20Z' fill='%23C5C5C5'/%3E%3C/svg%3E ");
 }
 .filter-input-checkbox:hover:checked + label::before {
-  background-image: url("/img/--inner-filter-checked-hover.svg");
+  background-image: url("data:image/svg+xml,%3Csvg width='27' height='23' viewBox='0 0 27 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.44741 7.48604L4.61841 10.315L12.4014 18.098L26.3334 4.16604L23.5054 1.33704L12.4014 12.439L7.44741 7.48604Z' fill='%23B5B5B5'/%3E%3Cpath d='M21.1624 20C21.1624 20.542 20.7044 21 20.1624 21H3.16241C2.62041 21 2.16241 20.542 2.16241 20V3C2.16241 2.458 2.62041 2 3.16241 2H20.0704L21.6554 0.415C21.2034 0.146542 20.6881 0.00329969 20.1624 0H3.16241C1.51241 0 0.162415 1.35 0.162415 3V20C0.162415 21.65 1.51241 23 3.16241 23H20.1624C21.8124 23 23.1624 21.65 23.1624 20V10.171L21.1624 12.171V20Z' fill='%23B5B5B5'/%3E%3C/svg%3E ");
 }
 
 .filter-input-radio + label::before {
@@ -1914,7 +1931,7 @@ a.sort-by-descending{
   outline: none;
   width: 30px;
   height: 30px;
-  top: 20px;
+  top: 5px;
   right: 11px;
   background-color: transparent;
   cursor: pointer;
@@ -1923,7 +1940,7 @@ a.sort-by-descending{
 .close-modal::after {
   content: "";
   position: absolute;
-  top: 1px;
+  top: 15px;
   right: 1px;
   width: 27px;
   height: 4px;
@@ -2044,6 +2061,7 @@ a.sort-by-descending{
   padding-top: 6px;
   padding-left: 12px;
   grid-area: tinput;
+  resize: none;
 }
 
 
@@ -2118,7 +2136,52 @@ a.sort-by-descending{
 }
 .make-visible {
   display: flex;
+  animation: bounce 0.6s;
 }
 .current-slide {
   display: block;
+}
+.modal-error {
+  animation: shake 0.6s;
+}
+
+/*Animations*/
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }

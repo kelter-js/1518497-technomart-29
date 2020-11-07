@@ -243,13 +243,13 @@
           <div class="service-list-description-wrapper">
             <ul class="services-list">
               <li class="services-list-item selected-service">
-                <a class="delivery-link" href="">Доставка</a>
+                <button class="delivery-link" href="">Доставка</button>
               </li>
               <li class="services-list-item">
-                <a class="guarantee-link" href="">Гарантия</a>
+                <button class="guarantee-link" href="">Гарантия</button>
               </li>
               <li class="services-list-item">
-                <a class="credit-link" href="">Кредит</a>
+                <button class="credit-link" href="">Кредит</button>
               </li>
             </ul>
 
@@ -415,13 +415,13 @@
     <section class="modal modal-contact-us">
       <h2 class="visually-hidden">Обратная связь</h2>
       <div class="modal-container">
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class='modal-form' action="https://echo.htmlacademy.ru/" method="post">
           <label class="first-form-label" for="modal-contact-us-user-name">Ваше имя:</label>
-          <input class="first-form-input" type="text" id="modal-contact-us-user-name" name="user-name" placeholder="Имя Фамилия" required>
+          <input class="first-form-input" type="text" id="modal-contact-us-user-name" name="name" placeholder="Имя Фамилия">
           <label class="second-form-label" for="modal-contact-us-user-email">Ваш e-mail:</label>
-          <input class="second-form-input" type="text" id="modal-contact-us-user-email" name="user-email" placeholder="email@example.com" required>
+          <input class="second-form-input" type="email" id="modal-contact-us-user-email" name="email" placeholder="email@example.com" >
           <label class="third-form-label" for="modal-contact-us-letter-text">Текст письма:</label>
-          <textarea class="third-form-input" type="text" id="modal-contact-us-letter-text" name="user-text" placeholder="В свободной форме" required></textarea>
+          <textarea class="third-form-input" type="text" id="modal-contact-us-letter-text" name="text" placeholder="В свободной форме" ></textarea>
           <div class="modal-background">
             <button type="submit" class="modal-button modal-button-send">отправить</button>
           </div>
@@ -430,5 +430,8 @@
       <button type="button" class="close-modal" aria-label="Закрыть окно с отправкой сообщения"></button>
     </section>
 
+    <script src='js/popup.js'></script>
+    <script src='js/slider.js'></script>
+    <script src='js/map.js'></script>
   </body>
 </html>
