@@ -1358,7 +1358,7 @@ body {
 
 .main-footer-second-wrapper {
   display: grid;
-  grid-template-area:
+  grid-template-areas:
   "copyright social feedback";
   grid-template-columns: repeat(3, 1fr);
   height: 107px;
